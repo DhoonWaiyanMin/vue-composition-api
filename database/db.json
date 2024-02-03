@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "title": "Post titlle one",
+      "id": "1",
+      "body": "Lorem Ipsum "
+    },
+    {
+      "title": "Post titlle two",
+      "id": "2",
+      "body": "Lorem Ipsum "
+    },
+    {
+      "title": "Post titlle three",
+      "id": "3",
+      "body": "Lorem Ipsum "
+    },
+    {
+      "id": "245e",
+      "title": "how to fetch data in php",
+      "body": "this is my very first post ",
+      "tags": [
+        "html",
+        "css",
+        "php"
+      ]
+    },
+    {
+      "id": "1309",
+      "title": "how to hunt a job",
+      "body": "how to hunt a job",
+      "tags": [
+        "job",
+        "hunting",
+        "soft-skill"
+      ]
+    }
+  ]
+}

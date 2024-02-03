@@ -2,6 +2,9 @@
   <div class="singlePost">
     <h3>{{ post.title }}</h3>
     <p>{{ cutPostBody }}</p>
+    <div class="pill" v-for="tag in post.tags" :key="tag">
+        {{ tag }}
+    </div>
   </div>
 </template>
 
@@ -29,5 +32,13 @@ export default {
     margin: 10px 0;
     border-radius: 20px;
     box-shadow: 0 0 10px #777;
+    text-decoration: none;
+}
+.pill{
+  display: inline-block;
+  background-color: #777;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
 }
 </style>
