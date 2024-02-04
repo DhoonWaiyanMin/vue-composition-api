@@ -12,7 +12,7 @@ export default{
 </script>
 <style>
 #app {
-  max-width: 500px;
+  max-width: 1200px;
   margin: 0 auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

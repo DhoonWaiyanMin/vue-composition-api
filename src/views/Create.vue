@@ -109,7 +109,7 @@ button{
   border-radius: 20px;
   text-transform: uppercase;
   box-shadow: 0 0 10px #777;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 button:hover{
   box-shadow: 0 0 20px #777;
@@ -117,8 +117,12 @@ button:hover{
 .pill{
   display: inline-block;
   background-color: #777;
+  text-align: center;
   color: white;
+  min-width: 50px;
+  height: 40px;
+  margin-right: 10px;
   padding: 10px 20px;
-  border-radius: 50%;
+  border-radius: 40px;
 }
 </style>

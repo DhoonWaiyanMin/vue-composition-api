@@ -49,8 +49,12 @@ export default {
 .pill{
   display: inline-block;
   background-color: #777;
+  text-align: center;
   color: white;
+  min-width: 50px;
+  height: 20px;
+  margin-right: 10px;
   padding: 10px 20px;
-  border-radius: 50%;
+  border-radius: 40px;
 }
 </style>

@@ -2,8 +2,13 @@
   <div v-if="error">
     <Spinner></Spinner>
   </div>
-  <div v-else-if="posts.length > 0">
-    <PostList :posts="filteredPost"></PostList>
+  <div v-else-if="posts.length > 0" class="layout">
+    <div>
+      <PostList :posts="filteredPost"></PostList>
+    </div>
+    <div>
+      <TagCloud :posts="posts"></TagCloud>
+    </div>
   </div>
   <div v-else>
     <Spinner></Spinner>
@@ -12,6 +17,7 @@
 </template>
 
 <script>
+import TagCloud from '../components/TagCloud'
 import PostList from '@/components/PostList.vue'
 import SinglePost from '../components/SinglePost'
 import Spinner from '../components/Spinner'
@@ -19,6 +25,7 @@ import getPosts from '@/composables/getPosts'
 import { computed } from 'vue'
 export default {
     components: {
+    TagCloud,
     SinglePost, Spinner,
     PostList
 },

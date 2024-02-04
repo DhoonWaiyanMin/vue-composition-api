@@ -37,6 +37,25 @@
         "php",
         "laravel"
       ]
+    },
+    {
+      "id": "bab2",
+      "title": "How to use chat GPT effectively ",
+      "body": "how to use chat GPT effectively ",
+      "tags": [
+        "gpt",
+        "coding",
+        "web",
+        "mobile"
+      ]
+    },
+    {
+      "id": "3374",
+      "title": "Angular ",
+      "body": "Angular is the most popular frontend framework.",
+      "tags": [
+        "Angular"
+      ]
     }
   ]
 }
