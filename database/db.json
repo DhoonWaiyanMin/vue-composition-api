@@ -1,21 +1,6 @@
 {
   "posts": [
     {
-      "title": "Post titlle one",
-      "id": "1",
-      "body": "Lorem Ipsum "
-    },
-    {
-      "title": "Post titlle two",
-      "id": "2",
-      "body": "Lorem Ipsum "
-    },
-    {
-      "title": "Post titlle three",
-      "id": "3",
-      "body": "Lorem Ipsum "
-    },
-    {
       "id": "245e",
       "title": "how to fetch data in php",
       "body": "this is my very first post ",
@@ -33,6 +18,24 @@
         "job",
         "hunting",
         "soft-skill"
+      ]
+    },
+    {
+      "id": "4fd3",
+      "title": "Vue Js",
+      "body": "Vue Js",
+      "tags": [
+        "vue js",
+        "js"
+      ]
+    },
+    {
+      "id": "bd54",
+      "title": "Laravel ",
+      "body": "Laravel ",
+      "tags": [
+        "php",
+        "laravel"
       ]
     }
   ]

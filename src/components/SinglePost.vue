@@ -1,9 +1,11 @@
 <template>
   <div class="singlePost">
     <h3>{{ post.title }}</h3>
-    <p>{{ cutPostBody }}</p>
-    <div class="pill" v-for="tag in post.tags" :key="tag">
-        {{ tag }}
+    <p v-if="post">{{ cutPostBody }}</p>
+    <div v-for="tag in post.tags" :key="tag" class="pill">
+        <router-link :to="{name : 'tag' , params : {tag : tag }}">
+          {{ tag }}
+        </router-link>
     </div>
   </div>
 </template>
@@ -40,5 +42,8 @@ export default {
   color: white;
   padding: 10px 20px;
   border-radius: 50%;
+}
+.pill a{
+  color: #fff;
 }
 </style>

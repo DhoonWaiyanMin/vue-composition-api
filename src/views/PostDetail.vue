@@ -25,8 +25,8 @@ export default {
     setup(props){
         // this.$route.params.id 
         let route = useRoute();
-        console.log(route.params.id)
-        let {post , error , load} = getPost(props.id);
+        // console.log(route.params.id)
+        let {post , error , load} = getPost(route.params.id);
         load()
 
         return {
