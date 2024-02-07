@@ -6,6 +6,8 @@
     <div v-for="tag in post.tags" :key="tag" class="pill">
       {{ tag }}
     </div>
+    <button class="delete-btn" @click="handleDelete">Delete Post</button>
+
   </div>
   <div v-else>
     <Spinner></Spinner>
@@ -18,20 +20,31 @@
 <script>
 import Spinner from '../components/Spinner'
 import getPost from "../composables/getPost"
-import { useRoute } from 'vue-router';
+import { db } from "../firebase/config"
+import { useRoute , useRouter } from 'vue-router';
 export default {
   components: { Spinner },
     props : ['id'],
     setup(props){
         // this.$route.params.id 
         let route = useRoute();
+        let router = useRouter()
+
         // console.log(route.params.id)
         let {post , error , load} = getPost(route.params.id);
         load()
 
+        let handleDelete = async ()=>{
+          let id = props.id;
+          await db.collection("posts").doc(id).delete()
+          router.push("/")
+        }
+
+
         return {
             post,
-            error
+            error,
+            handleDelete
         }
     }
 }
@@ -45,6 +58,7 @@ export default {
     border-radius: 20px;
     box-shadow: 0 0 10px #777;
     text-decoration: none;
+    position: relative;
 }
 .pill{
   display: inline-block;
@@ -56,5 +70,22 @@ export default {
   margin-right: 10px;
   padding: 10px 20px;
   border-radius: 40px;
+}
+.delete-btn{
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 10px;
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+.delete-btn:hover{
+  box-shadow: 0 0 20px #bbb;
+  background-color: darkred;
 }
 </style>
