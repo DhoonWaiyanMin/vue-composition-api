@@ -21,7 +21,7 @@ let getPosts = ()=>{
 
 
         // Data from Firebase 
-        let response = await db.collection("posts").get();
+        let response = await db.collection("posts").orderBy("created_at","desc").get();
         // console.log(response.docs);
         posts.value = response.docs.map((doc)=>{
           // console.log(doc.data());

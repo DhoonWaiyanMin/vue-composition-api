@@ -39,5 +39,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 let db = firebase.firestore()
+let timestamp = firebase.firestore.FieldValue.serverTimestamp
 
-export {db}
+export {db , timestamp }
